@@ -1,0 +1,15 @@
+llm:
+  provider: ollama
+  model: llama3.1:8b
+  host: http://localhost:11434
+
+retrieval:
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+  index_path: retrieval/vectordb/faiss_index
+  metadata_path: retrieval/vectordb/meta.json
+  top_k: 4
+
+news:
+  provider: gdelt
+  max_articles: 10
+  timespan: 30d
